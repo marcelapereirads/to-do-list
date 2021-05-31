@@ -1,0 +1,22 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelapereirads/to-do-list.git"
+  },
+  "author": "Marcela <“marcelapereirads@gmail.com”>",
+  "bugs": {
+    "url": "https://github.com/marcelapereirads/to-do-list/issues"
+  },
+  "homepage": "https://github.com/marcelapereirads/to-do-list#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "nodemon": "^2.0.7"
+  }
+}
