@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>To Do List</h1>
+    <form>
+        {{#each posts}}
+            <div class="card">
+                <div class="card-content">
+                    <label class="task__name">
+                        <input type="checkbox" class="filled-in" {{#if dataValues.done}}checked{{/if}}/>
+                        <span>{{dataValues.name}}</span>
+                    </label>
+                    <p>{{dataValues.description}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </form>
+</div>
