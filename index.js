@@ -15,4 +15,18 @@ app.get('/', (req, resp) => {
     Post.findAll({ order: [['done', 'ASC']]}).then(posts => resp.render('home', { posts }));
 });
 
+app.get('/new', (req, resp) => resp.render('new'));
+
+app.post('/new', (req, resp) => {
+    const data = {
+        name: req.body.name,
+        description: req.body.description,
+        done: false
+    };
+
+    Post.create(data)
+        .then(() => resp.redirect('/'))
+        .catch((error) => console.log('Error saving task:', error));
+});
+
 app.listen(8081, () => console.log('Server listening'));

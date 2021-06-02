@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>New Task</h1>
+    <form method="POST" action="/new">
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="name" type="text" />
+                <label for="name">Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea name="description" class="materialize-textarea"></textarea>
+                <label for="description">Description</label>
+            </div>
+        </div>
+        <div class="actions">
+            <a class="btn waves-effect waves-light red lighten-2" href="/" name="action">
+                Cancel
+            </a>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Save</button>
+        </div>
+    </form>
+</div>

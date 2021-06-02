@@ -1,5 +1,20 @@
+.task__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .task__name {
     color: rgba(0,0,0,0.87);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actions > a, button {
+    margin-left: 1rem;
 }
 
 [type="checkbox"]+span:not(.lever) {
