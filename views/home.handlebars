@@ -8,12 +8,17 @@
     <form>
         {{#each posts}}
             <div class="card">
-                <div class="card-content">
-                    <label class="task__name">
-                        <input type="checkbox" class="filled-in" {{#if dataValues.done}}checked{{/if}}/>
-                        <span>{{dataValues.name}}</span>
-                    </label>
-                    <p>{{dataValues.description}}</p>
+                <div class="card-content task__card">
+                    <div>
+                        <label class="task__name">
+                            <input type="checkbox" class="filled-in" {{#if dataValues.done}}checked{{/if}}/>
+                            <span>{{dataValues.name}}</span>
+                        </label>
+                        <p>{{dataValues.description}}</p>
+                    </div>
+                    <a href="/delete/{{dataValues.id}}">
+                        <i class="small material-icons">delete_forever</i>
+                    </a>
                 </div>
             </div>
         {{/each}}

@@ -29,4 +29,10 @@ app.post('/new', (req, resp) => {
         .catch((error) => console.log('Error saving task:', error));
 });
 
+app.get('/delete/:id', (req, resp) => {
+    Post.destroy({ where: { 'id': req.params.id } })
+        .then(() => resp.redirect('/'))
+        .catch((error) => console.log(` Error deleting task id ${req.params.id}: ${error}`));
+});
+
 app.listen(8081, () => console.log('Server listening'));

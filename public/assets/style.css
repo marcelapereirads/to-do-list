@@ -1,3 +1,12 @@
+a {
+    color: #E57373;
+}
+
+[type="checkbox"]+span:not(.lever) {
+    font-size: 2rem;
+}
+
+
 .task__header {
     display: flex;
     justify-content: space-between;
@@ -8,6 +17,12 @@
     color: rgba(0,0,0,0.87);
 }
 
+.task__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .actions {
     display: flex;
     justify-content: flex-end;
@@ -15,8 +30,4 @@
 
 .actions > a, button {
     margin-left: 1rem;
-}
-
-[type="checkbox"]+span:not(.lever) {
-    font-size: 2rem;
 }
