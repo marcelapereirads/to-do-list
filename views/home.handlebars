@@ -11,7 +11,11 @@
                 <div class="card-content task__card">
                     <div>
                         <label class="task__name">
-                            <input type="checkbox" class="filled-in" {{#if dataValues.done}}checked{{/if}}/>
+                            <input
+                                type="checkbox"
+                                class="filled-in"
+                                onclick="changeStatus({{dataValues.id}}, {{dataValues.done}})"
+                                {{#if dataValues.done}}checked{{/if}}/>
                             <span>{{dataValues.name}}</span>
                         </label>
                         <p>{{dataValues.description}}</p>
@@ -24,3 +28,8 @@
         {{/each}}
     </form>
 </div>
+<script>
+    function changeStatus(id, status) {
+        window.location.href = `/change-status/${id}/${!status}`;
+    }
+</script>
